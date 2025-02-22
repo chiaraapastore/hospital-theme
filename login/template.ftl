@@ -1,47 +1,21 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false>
-    <!DOCTYPE html>
-    <html class="kc-html">
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="robots" content="noindex, nofollow">
-        <title>HospitalCare - ${msg("loginTitle",(realm.displayName!''))}</title>
-        <link href="${url.resourcesPath}/css/login.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <style type="text/css">
+            <#include "resources/css/login.css">
+        </style>
+        <title><#nested "title"></title>
+
     </head>
 
-    <body class="kc-body">
-    <div class="kc-container">
-        <div id="kc-header" class="kc-header">
-            <div id="kc-header-wrapper">
-                <img src="${url.resourcesPath}/img/logo.png" alt="HospitalCare Logo" class="kc-logo"/>
-                <h1 class="kc-title">HospitalCare</h1>
-            </div>
-        </div>
-        <div class="kc-form-card">
-            <header class="kc-form-header">
-                <h2 id="kc-page-title"><#nested "header"></h2>
-            </header>
-            <div id="kc-content">
-                <div id="kc-content-wrapper">
-                    <#if displayMessage && message?has_content>
-                        <div class="kc-alert kc-alert-${message.type}">
-                            <span class="kc-alert-text">${kcSanitize(message.summary)?no_esc}</span>
-                        </div>
-                    </#if>
-                    <#nested "form">
-                    <#nested "socialProviders">
-                    <#if displayInfo>
-                        <div id="kc-info" class="kc-info">
-                            <div id="kc-info-wrapper">
-                                <#nested "info">
-                            </div>
-                        </div>
-                    </#if>
-                </div>
-            </div>
-        </div>
-    </div>
+    <body>
+    <#nested "form">
     </body>
     </html>
 </#macro>
