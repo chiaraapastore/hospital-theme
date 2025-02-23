@@ -1,14 +1,15 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
-    <#if section = "header">
-        <div id="kc-header" class="kc-header-container">
-            <div id="kc-header-logo">
-                <img src="${url.resourcesPath}/img/logo.png" alt="HospitalCare Logo" class="kc-logo"/>
-            </div>
-            <h1 class="kc-title">HospitalCare</h1>
-        </div>
-    <#elseif section = "form">
+
+    <#if section = "form">
         <div id="kc-form" class="kc-container">
+            <div id="kc-header">
+                <div id="kc-header-logo-title">
+                    <img src="${url.resourcesPath}/img/logo.png" alt="HospitalCare Logo" class="kc-logo"/>
+                    <h1 class="kc-title">HospitalCare</h1>
+                </div>
+            </div>
+
             <h3 class="kc-form-title">Login</h3>
             <#if realm.password>
                 <form id="kc-form-login" action="${url.loginAction}" method="post">
@@ -33,7 +34,9 @@
                     </div>
 
                     <div class="kc-registration-link">
-                        <span>Devi ancora registrarti? <a href="${url.registrationUrl}" class="kc-registration-text">Crea un account</a></span>
+                        <span>Devi ancora registrarti?
+                            <a href="${url.registrationUrl}" class="kc-registration-text">Crea un account</a>
+                        </span>
                     </div>
                 </form>
             </#if>
