@@ -1,5 +1,6 @@
+
 body {
-    background-color: #009abe;
+    background-color: #00796B;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,9 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 90px;
-
+    margin: auto;
 }
 
 .kc-wrapper {
@@ -36,7 +35,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding-top: 150px;
 }
 
 #kc-header-logo-title {
@@ -56,17 +54,15 @@ body {
     font-weight: bold;
     color: #2C3E50;
     margin: 0;
-    display: block !important;
-    visibility: visible !important;
+    text-align: center;
 }
-
 
 .kc-form-title {
     font-size: 20px;
     font-weight: bold;
     color: #2C3E50;
     margin-bottom: 20px;
-    padding-left: 25px;
+    text-align: center;
 }
 
 .kc-form-group {
@@ -79,6 +75,8 @@ body {
     font-size: 14px;
     font-weight: bold;
     color: #2C3E50;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .kc-input {
@@ -86,10 +84,11 @@ body {
     padding: 10px;
     border: 1px solid #BDC3C7;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .kc-button {
-    width: 108%;
+    width: 100%;
     padding: 12px;
     background-color: #62c2a2;
     color: white;
@@ -97,6 +96,8 @@ body {
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .kc-button:hover {
@@ -105,13 +106,11 @@ body {
 
 .kc-reset-password {
     display: block;
-    margin: 25px auto;
+    margin: 15px auto;
     font-size: 14px;
-    color: #2980B9;
+    color: #00796B;
     text-decoration: none;
     text-align: center;
-    width: fit-content;
-    padding-left: 26px;
 }
 
 .kc-reset-password:hover {
@@ -125,5 +124,5 @@ body {
 }
 
 .kc-registration-text {
-    color: #2980B9;
+    color: #00796B;
 }
