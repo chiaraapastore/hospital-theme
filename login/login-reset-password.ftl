@@ -2,7 +2,8 @@
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
 
     <#if section = "form">
-        <div id="kc-form" class="kc-container">
+        <div class="kc-container">
+        <div id="kc-form" >
 
             <div id="kc-header">
                 <div id="kc-header-logo-title">
@@ -30,6 +31,7 @@
                     </div>
                 </form>
             </#if>
+         </div>
         </div>
     </#if>
 

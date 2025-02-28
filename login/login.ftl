@@ -2,7 +2,8 @@
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
 
     <#if section = "form">
-        <div id="kc-form" class="kc-container">
+        <div class="kc-container">
+        <div id="kc-form" >
             <div id="kc-header">
                 <div id="kc-header-logo-title">
                     <img src="${url.resourcesPath}/img/logo.png" alt="HospitalCare Logo" class="kc-logo"/>
@@ -40,6 +41,7 @@
                     </div>
                 </form>
             </#if>
+         </div>
         </div>
     </#if>
 </@layout.registrationLayout>

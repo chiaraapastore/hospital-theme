@@ -2,8 +2,9 @@
 <@layout.registrationLayout displayMessage=!messagesPerField.existsError('firstName','lastName','email','username','password','password-confirm'); section>
 
     <#if section = "form">
-        <div class="kc-wrapper">
-            <div id="kc-form" class="kc-container">
+        <div class="register-container">
+        <div class="kc-wrapper" >
+            <div id="kc-form">
                 <div id="kc-header">
                     <div id="kc-header-logo-title">
                         <img src="${url.resourcesPath}/img/logo.png" alt="HospitalCare Logo" class="kc-logo"/>
@@ -37,15 +38,17 @@
                         <input type="password" id="password-confirm" class="kc-input" name="password-confirm"/>
                     </div>
 
-                    <div class="kc-form-group kc-reset-container">
-                        <a href="${url.loginUrl}" class="kc-reset-password">Torna al login</a>
-                    </div>
 
                     <div id="kc-form-buttons" class="kc-form-group">
                         <button class="kc-button kc-button-primary" type="submit">Iscriviti</button>
                     </div>
+
+                    <div class="kc-form-group kc-reset-container">
+                        <a href="${url.loginUrl}" class="kc-reset-password">Torna al login</a>
+                    </div>
                 </form>
             </div>
+         </div>
         </div>
     </#if>
 
